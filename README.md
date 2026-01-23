@@ -5,7 +5,7 @@
 #### Contributors:
 Brogan Gauld and Declan Malone
 
-Design Files: https://www.figma.com/design/20KAqq7lCiI5k4CcoJ1PfJ/Gallery-Design-Bedrooms
+[Figma Design Files](https://www.figma.com/design/20KAqq7lCiI5k4CcoJ1PfJ/Gallery-Design-Bedrooms)
 
 ---
 
