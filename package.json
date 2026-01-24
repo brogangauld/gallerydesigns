@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "new": "ng generate component menu",
+    "new": "ng generate component footer",
     "serve:ssr:gallerydesigns": "node dist/gallerydesigns/server/server.mjs"
   },
   "repository": {
