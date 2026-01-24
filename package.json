@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "new": "ng generate component contact",
+    "new": "ng generate service media-service",
     "serve:ssr:gallerydesigns": "node dist/gallerydesigns/server/server.mjs"
   },
   "repository": {

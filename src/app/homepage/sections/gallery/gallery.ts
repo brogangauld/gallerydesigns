@@ -1,11 +1,51 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { CarouselModule } from 'primeng/carousel';
+import { TagModule } from 'primeng/tag';
+import { CommonModule } from '@angular/common';
+import { MediaService } from './media-service/media-service';
+import { MediaItem } from './media-item';
 
 @Component({
   selector: 'app-gallery',
-  imports: [],
+  imports: [CarouselModule, TagModule, CommonModule],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
+  standalone: true
 })
 export class Gallery {
+  private mediaService = inject(MediaService);
+  
+  protected readonly mediaItems = signal<MediaItem[]>(
+    this.mediaService.getAllMedia()
+  );
 
+  protected readonly responsiveOptions = signal([
+    {
+      breakpoint: '1024px',
+      numVisible: 3,
+      numScroll: 3
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 2,
+      numScroll: 2
+    },
+    {
+      breakpoint: '560px',
+      numVisible: 1,
+      numScroll: 1
+    }
+  ]);
+
+  // Optional: filter by category
+  protected selectedCategory = signal<string | null>(null);
+
+  filterByCategory(category: string | null) {
+    this.selectedCategory.set(category);
+    this.mediaItems.set(
+      category 
+        ? this.mediaService.getMediaByCategory(category)
+        : this.mediaService.getAllMedia()
+    );
+  }
 }
