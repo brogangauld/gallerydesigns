@@ -20,22 +20,27 @@ export class Gallery {
   );
 
   protected readonly responsiveOptions = signal([
-    {
-      breakpoint: '1024px',
-      numVisible: 3,
-      numScroll: 3
-    },
-    {
-      breakpoint: '768px',
-      numVisible: 2,
-      numScroll: 2
-    },
-    {
-      breakpoint: '560px',
-      numVisible: 1,
-      numScroll: 1
-    }
-  ]);
+  {
+    breakpoint: '1400px',  // Extra large screens
+    numVisible: 4,
+    numScroll: 4
+  },
+  {
+    breakpoint: '1024px',  // Large screens
+    numVisible: 3,
+    numScroll: 3
+  },
+  {
+    breakpoint: '768px',   // Tablets
+    numVisible: 2,
+    numScroll: 2
+  },
+  {
+    breakpoint: '560px',   // Mobile
+    numVisible: 1,
+    numScroll: 1
+  }
+]);
 
   // Optional: filter by category
   protected selectedCategory = signal<string | null>(null);

@@ -1,3 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+.tag-info {
+  background: theme('colors.slate.50');
+  border-color: theme('colors.slate.200');
+  color: theme('colors.slate.700');
+}

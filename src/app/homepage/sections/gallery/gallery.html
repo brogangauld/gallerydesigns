@@ -1,22 +1,22 @@
 <div class="card">
     <p-carousel 
         [value]="mediaItems()" 
-        [numVisible]="3" 
-        [numScroll]="1" 
+        [numVisible]="4" 
+        [numScroll]="4" 
         [circular]="true"
-        [responsiveOptions]="responsiveOptions()" 
+        [responsiveOptions]="responsiveOptions()"
         [autoplayInterval]="3000">
         <ng-template let-item pTemplate="item">
             <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">
                 <div class="mb-4">
                     <div class="relative mx-auto">
                         <img 
-                            src="/media/gd0.jpg"
+                            [src]="item.image" 
                             [alt]="item.title"
                             class="w-full h-64 object-cover rounded" />
                         <p-tag 
                             [value]="item.category"
-                            class="absolute" 
+                            class="absolute tag-info"
                             [style]="{ left: '5px', top: '5px' }" />
                     </div>
                 </div>

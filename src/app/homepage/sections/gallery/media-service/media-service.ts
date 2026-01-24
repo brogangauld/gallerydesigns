@@ -8,45 +8,45 @@ export class MediaService {
   private readonly mediaItems = signal<MediaItem[]>([
     {
       id: '1',
-      image: '/media/gd0.jpg',
-      title: 'Modern Kitchen Design',
-      description: 'Contemporary kitchen with marble countertops',
-      category: 'kitchen'
+      image: '/media/gd0.jpeg',
+      title: 'Sliding Wardrobes',
+      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
+      category: 'SOLID WOOD'
     },
     {
       id: '2',
-      image: '/media/gd1.jpg',
-      title: 'Luxury Bathroom',
-      description: 'Spa-like bathroom renovation',
-      category: 'bathroom'
+      image: '/media/gd1.jpeg',
+      title: 'Living Room',
+      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
+      category: 'MARBLE'
     },
     {
       id: '3',
-      image: '/media/gd2.jpg',
-      title: 'Living Room Makeover',
-      description: 'Open concept living space',
-      category: 'living-room'
+      image: '/media/gd2.jpeg',
+      title: 'Awkward Spaces',
+      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
+      category: 'SOLID WOOD'
     },
     {
       id: '4',
-      image: '/media/gd3.jpg',
-      title: 'Bedroom Retreat',
-      description: 'Cozy master bedroom design',
-      category: 'bedroom'
+      image: '/media/gd3.jpeg',
+      title: 'Home Office',
+      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
+      category: 'VENEER MDF'
     },
     {
       id: '5',
-      image: '/media/gd4.jpg',
-      title: 'Office Space',
-      description: 'Professional home office setup',
-      category: 'office'
+      image: '/media/gd4.jpeg',
+      title: 'Walk-in Wardrobes',
+      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
+      category: 'GLASS'
     },
     {
       id: '6',
-      image: '/media/gd5.jpg',
-      title: 'Outdoor Patio',
-      description: 'Beautiful outdoor living area',
-      category: 'outdoor'
+      image: '/media/gd5.jpeg',
+      title: 'Fitted Wardrobes',
+      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
+      category: 'MARBLE'
     }
   ]);
 
