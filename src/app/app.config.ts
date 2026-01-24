@@ -34,7 +34,10 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
-        preset: galleryDesignsPreset
+        preset: galleryDesignsPreset,
+        options: {
+          darkModeSelector: false  // disable dark mode
+        }
       }
     })
   ]
