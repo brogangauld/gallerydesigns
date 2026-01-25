@@ -1,3 +1,9 @@
-<div class="sticky top-0 z-50 shadow-md">
-    <p-menubar [model]="items"></p-menubar>
-</div>
+<p-menubar [model]="items" class="main-menu">
+  <ng-template pTemplate="start">
+    <img
+      src="/logo/logo.svg"
+      class="h-10"
+      alt="Logo"
+    />
+  </ng-template>
+</p-menubar>

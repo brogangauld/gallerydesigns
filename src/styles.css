@@ -15,3 +15,21 @@
   }
 }
 
+/* Force menubar layout */
+.p-menubar {
+  display: flex !important;
+  align-items: center;
+}
+
+/* Logo container */
+.p-menubar-start {
+  margin-right: auto;
+}
+
+/* Menu list container */
+.p-menubar-root-list {
+  display: flex !important;
+  justify-content: flex-end !important;
+  width: 100%;
+}
+
