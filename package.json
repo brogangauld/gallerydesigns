@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration \"production\"",
+    "build:prod": "ng build --configuration production --output-path=dist/gallerydesigns",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "new": "ng generate component rich-text"
@@ -37,7 +37,6 @@
     "@angular/platform-browser": "^21.1.0",
     "@angular/router": "^21.1.0",
     "@primeuix/themes": "^2.0.3",
-    "express": "^5.1.0",
     "primeicons": "^7.0.0",
     "primeng": "^21.0.4",
     "rxjs": "~7.8.0",
