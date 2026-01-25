@@ -1,17 +1,17 @@
-<div class="flex flex-col gap-2">
-    <p-accordion [value]="0">
-        @for (tab of tabs; track tab.value) {
-        <p-accordion-panel [value]="tab.value">
-            <p-accordion-header>
-                <span class="flex items-center gap-3 text-lg font-medium">
-                    <i [class]="tab.icon + ' text-2xl'"></i>
-                    <span>{{ tab.title }}</span>
-                </span>
-            </p-accordion-header>
-            <p-accordion-content>
-                <p class="m-0">{{ tab.content }}</p>
-            </p-accordion-content>
-        </p-accordion-panel>
-        }
-    </p-accordion>
+<div class="flex flex-col md:flex-row gap-4 m-12">
+    <div class="w-full flex flex-col md:w-1/2">
+        <div class="w-full flex">
+    <app-rich-text 
+        tag="Stages of Work" 
+        title="Our Services"
+        content="We've refined our process over hundreds of projects to make it as straightforward as possible. Here's exactly what to expect:">
+    </app-rich-text>
+    </div>
+    <div class="w-full flex">
+        <app-services-accordion id="services-accordion"></app-services-accordion>
+    </div>
+    </div>
+    <div class="w-full md:w-1/2">
+        <img src="/media/gd0.jpeg" class="w-full h-full object-cover">
+    </div>
 </div>
