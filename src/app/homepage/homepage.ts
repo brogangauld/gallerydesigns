@@ -19,7 +19,7 @@ import { RichText } from "./sections/rich-text/rich-text";
     Contact, 
     // Faq, 
     Gallery, 
-    // Hero, 
+    Hero, 
     // HowItWorks, 
     // Location, 
     Reviews, 
