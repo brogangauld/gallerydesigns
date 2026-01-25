@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "new": "ng generate service media-service"
+    "new": "ng generate component rich-text"
   },
   "repository": {
     "type": "git",

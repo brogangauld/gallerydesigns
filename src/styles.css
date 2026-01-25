@@ -1,10 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "tailwindcss";
 @import "primeicons/primeicons.css";
 
-.tag-info {
-  background: theme('colors.slate.50');
-  border-color: theme('colors.slate.200');
-  color: theme('colors.slate.700');
+@layer components {
+  .tag-info {
+    --p-tag-background: #f8fafc !important; /* slate-50 */
+    --p-tag-border-color: #e2e8f0 !important; /* slate-200 */
+    --p-tag-color: #334155 !important; /* slate-700 */
+  }
 }
