@@ -6,7 +6,6 @@ import { Faq } from './sections/faq/faq';
 import { Gallery } from './sections/gallery/gallery';
 import { Hero } from './sections/hero/hero';
 import { HowItWorks } from './sections/how-it-works/how-it-works';
-import { Location } from './sections/location/location';
 import { Reviews } from './sections/reviews/reviews';
 import { Services } from './sections/services/services';
 import { RichText } from "./sections/rich-text/rich-text";
@@ -21,7 +20,6 @@ import { RichText } from "./sections/rich-text/rich-text";
     Gallery, 
     Hero, 
     // HowItWorks, 
-    // Location, 
     Reviews, 
     Services, 
     RichText],

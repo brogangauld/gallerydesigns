@@ -15,26 +15,45 @@ export class Menu {
   ngOnInit() {
     this.items = [
       {
+        label: 'Our Work',
+        icon: 'pi pi-image',
+        command: () => { this.scrollTo('gallery')}
+      },
+      {
         label: 'Our Services',
-        icon: 'pi pi-briefcase'
+        icon: 'pi pi-cog',
+        command: () => { this.scrollTo('services')}
       },
       {
         label: 'Our Process',
-        icon: 'pi pi-cog'
+        icon: 'pi pi-briefcase',
+        disabled: true,
+        command: () => { this.scrollTo('how-it-works')}
       },
       {
-        label: 'Gallery',
-        icon: 'pi pi-image'
+        label: 'Materials',
+        icon: 'pi pi-book',
+        disabled: true,
+        // command: () => { this.scrollTo('how-it-works')}
       },
       {
         label: 'Book an Appointment',
-        icon: 'pi pi-calendar'
+        icon: 'pi pi-calendar',
+        disabled: true,
+        // command: () => { this.scrollTo('how-it-works')}
       },
       {
         label: 'Contact Us',
-        icon: 'pi pi-envelope'
+        icon: 'pi pi-envelope',
+        command: () => { this.scrollTo('contact')}
       }
     ];
+  }
+  scrollTo(anchorId: string) {
+    const el = document.getElementById(anchorId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
 }
