@@ -1,14 +1,21 @@
-<section
-  class="relative w-full h-160 md:h-190 bg-lightgray bg-cover bg-center"
-  style="background-image: url('/media/gd3.jpeg');"
->
+<section class="relative z-10 w-full min-h-dvh bg-lightgray bg-cover bg-center"
+  style="background-image: url('/media/gd3.jpeg');">
   <!-- Gradient overlay -->
-  <div class="absolute inset-0 bg-linear-to-b from-black/0 via-black/20"></div>
+  <div class="absolute inset-0 bg-linear-to-b 
+  from-black/20 from-0%
+  via-black/20 via-20%
+    to-black/0 to-100%">
+  </div>
 
-  <!-- Content on top -->
-  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Gallery Designs</h1>
-    <p class="text-lg md:text-2xl mb-6">Premium services for your creative projects</p>
-    <button class="px-6 py-3 bg-primary-600 rounded hover:bg-primary-700 transition">Learn More</button>
+  <div class="relative z-20 pl-20 pt-60">
+    <p-tag severity="secondary">Your local tradesmen</p-tag>
+    <h1 class="text-6xl text-white mt-6">Storage Solutions. 
+      <b class="underline">Built Better.</b>
+    </h1>
+    <p class="text-2xl text-white mt-6">Scotland's largest fitted bedroom showroom with over 34 room displays</p>
+    <div class="flex gap-6 mt-8 hero-buttons">
+      <p-button label="Book your appointment" [rounded]="true" severity="secondary" icon="pi pi-arrow-right" iconPos="right"/>
+      <p-button label="See our services" [rounded]="true" severity="contrast" icon="pi pi-wrench" iconPos="right"/>
+    </div>
   </div>
 </section>

@@ -8,7 +8,7 @@ import { Hero } from './sections/hero/hero';
 import { HowItWorks } from './sections/how-it-works/how-it-works';
 import { Reviews } from './sections/reviews/reviews';
 import { Services } from './sections/services/services';
-import { RichText } from "./sections/rich-text/rich-text";
+import { RichText } from "../common/rich-text/rich-text";
 
 @Component({
   selector: 'app-homepage',
