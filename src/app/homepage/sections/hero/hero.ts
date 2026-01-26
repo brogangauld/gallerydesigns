@@ -10,5 +10,10 @@ import { TagModule } from 'primeng/tag';
   styleUrl: './hero.css',
 })
 export class Hero {
-
+  scrollTo(anchorId: string) {
+    const el = document.getElementById(anchorId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }  
+  }
 }

@@ -7,15 +7,20 @@
     to-black/0 to-100%">
   </div>
 
-  <div class="relative z-20 pl-20 pt-60">
+  <div class="relative z-20 pl-20 pt-60 w-3/5">
     <p-tag severity="secondary">Your local tradesmen</p-tag>
     <h1 class="text-6xl text-white mt-6">Storage Solutions. 
       <b class="underline">Built Better.</b>
     </h1>
     <p class="text-2xl text-white mt-6">Scotland's largest fitted bedroom showroom with over 34 room displays</p>
     <div class="flex gap-6 mt-8 hero-buttons">
-      <p-button label="Book your appointment" [rounded]="true" severity="secondary" icon="pi pi-arrow-right" iconPos="right"/>
-      <p-button label="See our services" [rounded]="true" severity="contrast" icon="pi pi-wrench" iconPos="right"/>
+      <p-button label="Book your appointment" [rounded]="true" 
+      severity="secondary" icon="pi pi-arrow-right" iconPos="right"
+      (onClick)="scrollTo('contact')"/>
+
+      <p-button label="See our services" [rounded]="true" 
+      severity="contrast" icon="pi pi-wrench" iconPos="right"
+      (onClick)="scrollTo('services')"/>
     </div>
   </div>
 </section>
