@@ -8,6 +8,7 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { MessageModule } from 'primeng/message';
 import { CommonModule } from '@angular/common';
 import { ContactForm } from "./contact-form/contact-form";
+import { RichText } from '../../../common/rich-text/rich-text';
 
 @Component({
   selector: 'app-contact',
@@ -21,7 +22,8 @@ import { ContactForm } from "./contact-form/contact-form";
     ButtonModule,
     FloatLabelModule,
     MessageModule,
-    ContactForm
+    ContactForm,
+    RichText
 ],
   templateUrl: './contact.html'
 })
