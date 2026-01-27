@@ -1,4 +1,4 @@
-<section class="relative z-10 w-full min-h-dvh bg-lightgray bg-cover bg-center"
+<section class="relative z-10 w-full min-h-dvh bg-lightgray bg-cover bg-center flex flex-col"
   style="background-image: url('/media/gd3.jpeg');">
   <!-- Gradient overlay -->
   <div class="absolute inset-0 bg-linear-to-b 
@@ -7,7 +7,8 @@
     to-black/0 to-100%">
   </div>
 
-  <div class="relative z-20 pl-20 pt-40 w-3/5">
+  <div class="flex-1"></div>
+  <div class="relative z-20 pl-20 w-3/5 mb-32 jusify-center">
     <p-tag severity="secondary">Your local tradesmen</p-tag>
     <h1 class="text-6xl text-white mt-6">Storage Solutions.
       <b class="underline">Built Better.</b>
@@ -21,36 +22,39 @@
         (onClick)="scrollTo('services')" />
     </div>
   </div>
+  <div class="flex-1"></div>
 
-  <div class="ml-20 mr-20 mt-10 mb-10">
-    <p-divider />
-  </div>
+  <div class="absolute bottom-10 left-0 right-0 z-20">
+    <div class="ml-20 mr-20 mt-10 mb-10">
+      <p-divider />
+    </div>
 
-  <div class="flex gap-2 justify-end pr-20 pb-10">
-    <app-stats [stat]="{ 
+    <div class="flex gap-2 justify-end pr-20">
+      <app-stats [stat]="{ 
       figure: '12', 
       title: 'Years Experience', 
       description: 'Improving homes with expert craftsmanship for years' 
       }">
-    </app-stats>
-    <app-stats [stat]="{ 
+      </app-stats>
+      <app-stats [stat]="{ 
       figure: '300+', 
       title: 'Projects Completed', 
       description: 'Over 347 successful projects delivered with quality and care' 
       }">
-    </app-stats>
-    <app-stats [stat]="{ 
+      </app-stats>
+      <app-stats [stat]="{ 
       figure: '4', 
       title: 'Skilled Tradespeople', 
       description: 'Our team ensures top-quality results' 
       }">
-    </app-stats>
-    <app-stats [stat]="{ 
+      </app-stats>
+      <app-stats [stat]="{ 
       figure: '100%', 
       title: 'Client Satisfaction', 
       description: 'All of our clients are satisfied with our work and service' 
       }">
-    </app-stats>
+      </app-stats>
+    </div>
   </div>
 
 </section>
