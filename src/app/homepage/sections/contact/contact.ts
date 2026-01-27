@@ -9,6 +9,7 @@ import { MessageModule } from 'primeng/message';
 import { CommonModule } from '@angular/common';
 import { ContactForm } from "./contact-form/contact-form";
 import { RichText } from '../../../common/rich-text/rich-text';
+import { Divider } from "primeng/divider";
 
 @Component({
   selector: 'app-contact',
@@ -23,7 +24,8 @@ import { RichText } from '../../../common/rich-text/rich-text';
     FloatLabelModule,
     MessageModule,
     ContactForm,
-    RichText
+    RichText,
+    Divider
 ],
   templateUrl: './contact.html'
 })
