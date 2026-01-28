@@ -25,21 +25,14 @@ export class Menu {
         icon: 'pi pi-cog',
         command: () => { this.scrollTo('services') }
       },
-      {
-        label: 'Our Process',
-        icon: 'pi pi-briefcase',
-        disabled: true,
-        command: () => { this.scrollTo('how-it-works') }
-      },
+      // {
+      //   label: 'Our Process',
+      //   icon: 'pi pi-briefcase',
+      //   command: () => { this.scrollTo('how-it-works') }
+      // },
       {
         label: 'Materials',
         icon: 'pi pi-book',
-        disabled: true,
-        // command: () => { this.scrollTo('how-it-works')}
-      },
-      {
-        label: 'Book an Appointment',
-        icon: 'pi pi-calendar',
         disabled: true,
         // command: () => { this.scrollTo('how-it-works')}
       },
