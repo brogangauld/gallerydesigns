@@ -1,60 +1,89 @@
-<section class="relative z-10 w-full min-h-dvh bg-lightgray bg-cover bg-center flex flex-col"
-  style="background-image: url('/media/gd3.jpeg');">
+<section
+  class="relative z-10 w-full
+         min-h-[95dvh]
+         bg-cover bg-center
+         flex flex-col"
+  style="background-image: url('/media/gd3.jpeg');"
+>
   <!-- Gradient overlay -->
-  <div class="absolute inset-0 bg-linear-to-b 
-  from-black/20 from-0%
-  via-black/20 via-20%
-    to-black/0 to-100%">
+  <div
+    class="absolute inset-0 bg-linear-to-b
+           from-black/20 via-black/20 to-black/0">
   </div>
 
+  <!-- Spacer -->
   <div class="flex-1"></div>
-  <div class="relative z-20 pl-20 w-3/5 mb-32 jusify-center">
+
+  <!-- Hero content -->
+  <div class="relative z-20 pl-6 md:pl-20 w-full md:w-3/5 mb-24 md:mb-32">
     <p-tag severity="secondary">Your local tradesmen</p-tag>
-    <h1 class="text-6xl text-white mt-6">Storage Solutions.
+
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl text-white mt-6 leading-tight">
+      Storage Solutions.
       <b class="underline">Built Better.</b>
     </h1>
-    <p class="text-2xl text-white mt-6">Scotland's largest fitted bedroom showroom with over 34 room displays</p>
-    <div class="flex gap-6 mt-8 hero-buttons">
-      <p-button label="Book your appointment" [rounded]="true" severity="secondary" icon="pi pi-arrow-right"
-        iconPos="right" (onClick)="scrollTo('contact')" />
 
-      <p-button label="See our services" [rounded]="true" severity="contrast" icon="pi pi-wrench" iconPos="right"
-        (onClick)="scrollTo('services')" />
+    <p class="text-lg sm:text-xl lg:text-2xl text-white mt-6">
+      Scotland's largest fitted bedroom showroom with over 34 room displays
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8">
+      <p-button
+        class="w-full sm:w-auto"
+        label="Book your appointment"
+        [rounded]="true"
+        severity="secondary"
+        icon="pi pi-arrow-right"
+        iconPos="right"
+        (onClick)="scrollTo('contact')"
+      />
+
+      <p-button
+        class="w-full sm:w-auto"
+        label="See our services"
+        [rounded]="true"
+        severity="contrast"
+        icon="pi pi-wrench"
+        iconPos="right"
+        (onClick)="scrollTo('services')"
+      />
     </div>
   </div>
+
+  <!-- Spacer -->
   <div class="flex-1"></div>
 
-  <div class="absolute bottom-10 left-0 right-0 z-20">
-    <div class="ml-20 mr-20 mt-10 mb-10">
+  <!-- Stats / carousel -->
+  <div class="absolute bottom-6 md:bottom-10 left-0 right-0 z-20">
+    <div class="mx-6 md:mx-20 mt-6 md:mt-10 mb-6 md:mb-10">
       <p-divider />
     </div>
 
-    <div class="flex gap-2 justify-end pr-20">
-      <app-stats [stat]="{ 
-      figure: '12', 
-      title: 'Years Experience', 
-      description: 'Improving homes with expert craftsmanship for years' 
-      }">
-      </app-stats>
-      <app-stats [stat]="{ 
-      figure: '300+', 
-      title: 'Projects Completed', 
-      description: 'Over 347 successful projects delivered with quality and care' 
-      }">
-      </app-stats>
-      <app-stats [stat]="{ 
-      figure: '4', 
-      title: 'Skilled Tradespeople', 
-      description: 'Our team ensures top-quality results' 
-      }">
-      </app-stats>
-      <app-stats [stat]="{ 
-      figure: '100%', 
-      title: 'Client Satisfaction', 
-      description: 'All of our clients are satisfied with our work and service' 
-      }">
-      </app-stats>
+    <!-- Desktop stats -->
+    <div class="hidden md:flex gap-2 justify-end pr-6 md:pr-20">
+      <app-stats [stat]="{ figure: '12', title: 'Years Experience', description: 'Improving homes with expert craftsmanship for years' }" />
+      <app-stats [stat]="{ figure: '300+', title: 'Projects Completed', description: 'Over 347 successful projects delivered with quality and care' }" />
+      <app-stats [stat]="{ figure: '4', title: 'Skilled Tradespeople', description: 'Our team ensures top-quality results' }" />
+      <app-stats [stat]="{ figure: '100%', title: 'Client Satisfaction', description: 'All of our clients are satisfied with our work and service' }" />
+    </div>
+
+    <!-- Mobile carousel -->
+    <div class="md:hidden px-6">
+      <p-carousel
+        [value]="stats"
+        [numVisible]="1"
+        [numScroll]="1"
+        [circular]="true"
+        [autoplayInterval]="2000"
+        [showNavigators]="false"
+      >
+        <ng-template pTemplate="item" let-stat>
+          <div class="flex justify-center">
+            <app-stats [stat]="stat" variant="compact" />
+          </div>
+        </ng-template>
+      </p-carousel>
     </div>
   </div>
-
 </section>

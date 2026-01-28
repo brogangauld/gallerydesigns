@@ -43,7 +43,7 @@ export class MediaService {
     },
     {
       id: '6',
-      image: '/media/gd5.jpeg',
+      image: '/media/gd0.jpeg',
       title: 'Fitted Wardrobes',
       description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
       category: 'MARBLE'
