@@ -1,5 +1,22 @@
-<p-menubar [model]="items">
-  <ng-template pTemplate="end">
-    <img src="/logo/logo.svg" alt="Logo" class="h-8" />
-  </ng-template>
-</p-menubar>
+<nav class="fixed top-0 left-0 right-0 z-50
+         transition-all ease-in-out" [ngClass]="{
+    'bg-transparent text-white': isOverHero,
+    'bg-white text-black shadow-md': !isOverHero
+  }">
+  <div class="mx-auto md:px-20
+              flex items-center justify-between h-16">
+    <img [src]="isOverHero ? '/logo/logo-contrast.svg' : '/logo/logo.svg'" class="h-6" />
+
+    <ul class="flex gap-8 text-sm font-semibold">
+      <li>
+        <button (click)="scrollTo('materials')" class="cursor-pointer">Materials</button>
+      </li>
+      <li>
+        <button (click)="scrollTo('gallery')" class="cursor-pointer">Our Work</button>
+      </li>
+      <li>
+        <button (click)="scrollTo('contact')" class="cursor-pointer">Contact Us</button>
+      </li>
+    </ul>
+  </div>
+</nav>
