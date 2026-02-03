@@ -1,4 +1,4 @@
-export type ServiceTab = {
+export type QuestionAnswerTab = {
     value: number;
     title: string;
     content: string;

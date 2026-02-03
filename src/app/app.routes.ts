@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { Homepage } from './pages/homepage/homepage';
-import { Faq } from './pages/faq/faq';
+import { FaqPage } from './pages/faq-page/faq-page';
 
 export const routes: Routes = [
   {
@@ -9,7 +9,7 @@ export const routes: Routes = [
   },
   {
     path: 'faq',
-    component: Faq 
+    component: FaqPage 
   },
   {
     path: '**',
