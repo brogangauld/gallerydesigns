@@ -30,6 +30,15 @@ export class Menu implements AfterViewInit{
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
+  goHome() {
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']);
+    } else {
+      // if already on homepage, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
   scrollTo(anchorId: string) {
     this.isMobileMenuOpen = false;
 
