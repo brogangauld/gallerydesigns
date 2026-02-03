@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CardModule } from 'primeng/card';
-import { RichText } from '../../../common/rich-text/rich-text';
+import { RichText } from '../../../../common/rich-text/rich-text';
 
 @Component({
   selector: 'app-reviews',
@@ -9,9 +9,4 @@ import { RichText } from '../../../common/rich-text/rich-text';
   styleUrl: './reviews.css',
 })
 export class Reviews {
-
-  // truncateText(text: string, maxLength: number): string {
-  //   if (text.length <= maxLength) return text;
-  //   return text.substring(0, maxLength).trim() + '...';
-  // }
 }

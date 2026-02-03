@@ -7,7 +7,7 @@ import { ButtonModule } from 'primeng/button';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { MessageModule } from 'primeng/message';
 import { CommonModule } from '@angular/common';
-import { RichText } from '../../../common/rich-text/rich-text';
+import { RichText } from '../../../../common/rich-text/rich-text';
 
 @Component({
   selector: 'app-contact',

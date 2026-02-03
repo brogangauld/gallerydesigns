@@ -11,22 +11,28 @@
 
     <!-- Desktop Menu -->
     <ul class="hidden md:flex gap-8 text-sm font-semibold">
-      <li>
-        <button (click)="scrollTo('materials')" 
-                class="hover:opacity-70 transition-opacity duration-200">
+      <!-- <li>
+        <button (click)="scrollTo('materials')"
+                class="hover:opacity-70 transition-opacity duration-200 cursor-pointer">
           Materials
         </button>
-      </li>
+      </li> -->
       <li>
         <button (click)="scrollTo('gallery')" 
-                class="hover:opacity-70 transition-opacity duration-200">
+                class="hover:opacity-70 transition-opacity duration-200 cursor-pointer">
           Our Work
         </button>
       </li>
       <li>
+        <button routerLink="/faq" 
+                class="hover:opacity-70 transition-opacity duration-200 cursor-pointer">
+          FAQ
+        </button>
+      </li>
+      <li>
         <button (click)="scrollTo('contact')" 
-                class="hover:opacity-70 transition-opacity duration-200">
-          Contact Us
+                class="hover:opacity-70 transition-opacity duration-200 cursor-pointer">
+          Book an Appointment
         </button>
       </li>
     </ul>

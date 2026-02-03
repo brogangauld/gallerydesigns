@@ -1,9 +1,10 @@
-import { Component, AfterViewInit, HostListener } from '@angular/core';
+import { Component, AfterViewInit, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './menu.html',
   styleUrl: './menu.css',
   standalone: true
@@ -11,6 +12,8 @@ import { CommonModule } from '@angular/common';
 export class Menu implements AfterViewInit{
   isScrolled = false;
   isMobileMenuOpen = false;
+
+  private router = inject(Router);
 
   @HostListener('window:scroll')
   onScroll() {
@@ -28,10 +31,24 @@ export class Menu implements AfterViewInit{
   }
 
   scrollTo(anchorId: string) {
+    this.isMobileMenuOpen = false;
+
+    // if not on homepage, navigate there first
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(() => {
+        // wait for navigation and rendering
+        setTimeout(() => {
+          this.performScroll(anchorId);
+        }, 100);
+      });
+    } else {
+      this.performScroll(anchorId);
+    }
+  }
+
+  private performScroll(anchorId: string) {
     const element = document.getElementById(anchorId);
     if (!element) return;
-    
-    this.isMobileMenuOpen = false;
     
     const navHeight = 64;
     const elementPosition = element.getBoundingClientRect().top + window.scrollY;
