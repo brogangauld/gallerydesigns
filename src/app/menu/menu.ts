@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -10,35 +8,38 @@ import { AfterViewInit, ViewChild, ElementRef } from '@angular/core';
   styleUrl: './menu.css',
   standalone: true
 })
-export class Menu implements AfterViewInit {
-  items: MenuItem[] | undefined;
-  isOverHero = true;
+export class Menu implements AfterViewInit{
+  isScrolled = false;
+  isMobileMenuOpen = false;
+
+  @HostListener('window:scroll')
+  onScroll() {
+    // transition when scrolled past top of viewport height
+    this.isScrolled = window.scrollY > window.innerHeight * 0.15;
+  }
 
   ngAfterViewInit() {
-    const hero = document.getElementById('hero');
-    if (!hero) return;
+    // check initial scroll position
+    this.onScroll();
+  }
 
-    let timeout: any;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
-          this.isOverHero = entry.intersectionRatio > 0.3
-        }, 40)
-      },
-      {
-        threshold: [0, 0.15, 0.3],
-        rootMargin: '-120px 0px 0px 0px'
-      }
-    );
-
-    observer.observe(hero);
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
   scrollTo(anchorId: string) {
-    const el = document.getElementById(anchorId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    const element = document.getElementById(anchorId);
+    if (!element) return;
+    
+    this.isMobileMenuOpen = false;
+    
+    const navHeight = 64;
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - navHeight;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   }
 }
