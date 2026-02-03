@@ -1,9 +1,9 @@
 <div class="w-full md:px-7 pb-10">
-  <p-carousel [value]="mediaItems()" [numVisible]="5" [numScroll]="5" [circular]="true"
+  <p-carousel [value]="mediaItems()" [numVisible]="4" [numScroll]="4" [circular]="true"
     [responsiveOptions]="responsiveOptions()" [autoplayInterval]="8000">
     <ng-template let-item pTemplate="item">
       <!-- Carousel item -->
-      <div class="relative h-96 lg:h-112 rounded overflow-hidden m-2">
+      <div class="relative h-112 lg:h-140 rounded overflow-hidden m-2">
 
         <!-- Background image -->
         <img [src]="item.image" [alt]="item.title" class="absolute inset-0 w-full h-full object-cover" />
