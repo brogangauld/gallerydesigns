@@ -8,43 +8,43 @@ export class MediaService {
   private readonly mediaItems = signal<MediaItem[]>([
     {
       id: '1',
-      image: '/media/gd0.jpeg',
+      image: '/media/gd1.png',
       title: 'Home Office',
       description: 'Home office storage that fits your style and maximizes productivity.',
     },
     {
       id: '2',
-      image: '/media/gd1.jpeg',
+      image: '/media/gd2.png',
       title: 'Living Room',
       description: 'Entertainment units that blend seamlessly and keep clutter out of sight.',
     },
     {
       id: '3',
-      image: '/media/gd2.jpeg',
+      image: '/media/gd3.png',
       title: 'Bedrooms',
       description: 'Dreamy bedroom storage solutions designed for ultimate relaxation.',
     },
     {
       id: '4',
-      image: '/media/gd4.jpeg',
+      image: '/media/gd4.png',
       title: 'Walk-in Wardrobes',
       description: 'Create the walk-in wardrobe you\'ve always dreamed of.',
     },
     {
       id: '5',
-      image: '/media/gd5.jpeg',
+      image: '/media/gd5.png',
       title: 'Fitted Wardrobes',
       description: 'Maximise every inch with fitted wardrobes tailored to your space.',
     },
     {
       id: '6',
-      image: '/media/gd6.jpeg',
+      image: '/media/gd6.webp',
       title: 'Awkward Spaces',
       description: 'Clever storage solutions for those hard-to-work-with spaces.',
     },
     {
       id: '7',
-      image: '/media/gd7.jpeg',
+      image: '/media/gd7.webp',
       title: 'Sliding Wardrobes',
       description: 'Space-saving sliding wardrobes that bring style and functionality.',
     }
