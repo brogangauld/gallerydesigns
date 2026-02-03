@@ -21,9 +21,14 @@ export class Gallery {
 
   protected readonly responsiveOptions = signal([
     {
-      breakpoint: '1400px',  // Extra large screens
+      breakpoint: '1400px',  // XXL screens
       numVisible: 5,
       numScroll: 5
+    },
+    {
+      breakpoint: '1200px',  // XL screens
+      numVisible: 4,
+      numScroll: 4
     },
     {
       breakpoint: '1024px',  // Large screens
