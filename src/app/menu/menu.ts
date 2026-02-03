@@ -48,7 +48,7 @@ export class Menu implements AfterViewInit{
         // wait for navigation and rendering
         setTimeout(() => {
           this.performScroll(anchorId);
-        }, 100);
+        }, 100); // TODO increase timeout for book appointment, widget loading time
       });
     } else {
       this.performScroll(anchorId);
