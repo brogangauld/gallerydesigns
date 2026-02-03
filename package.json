@@ -8,7 +8,7 @@
     "build:prod": "ng build --configuration production --output-path=dist/gallerydesigns",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "new": "ng generate component rich-text"
+    "new": "ng generate component hero"
   },
   "repository": {
     "type": "git",
