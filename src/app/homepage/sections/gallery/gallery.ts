@@ -14,43 +14,31 @@ import { MediaItem } from './media-item';
 })
 export class Gallery {
   private mediaService = inject(MediaService);
-  
+
   protected readonly mediaItems = signal<MediaItem[]>(
     this.mediaService.getAllMedia()
   );
 
   protected readonly responsiveOptions = signal([
-  {
-    breakpoint: '1400px',  // Extra large screens
-    numVisible: 4,
-    numScroll: 4
-  },
-  {
-    breakpoint: '1024px',  // Large screens
-    numVisible: 3,
-    numScroll: 3
-  },
-  {
-    breakpoint: '768px',   // Tablets
-    numVisible: 2,
-    numScroll: 2
-  },
-  {
-    breakpoint: '560px',   // Mobile
-    numVisible: 1,
-    numScroll: 1
-  }
-]);
-
-  // Optional: filter by category
-  protected selectedCategory = signal<string | null>(null);
-
-  filterByCategory(category: string | null) {
-    this.selectedCategory.set(category);
-    this.mediaItems.set(
-      category 
-        ? this.mediaService.getMediaByCategory(category)
-        : this.mediaService.getAllMedia()
-    );
-  }
+    {
+      breakpoint: '1400px',  // Extra large screens
+      numVisible: 4,
+      numScroll: 4
+    },
+    {
+      breakpoint: '1024px',  // Large screens
+      numVisible: 3,
+      numScroll: 3
+    },
+    {
+      breakpoint: '768px',   // Tablets
+      numVisible: 2,
+      numScroll: 2
+    },
+    {
+      breakpoint: '560px',   // Mobile
+      numVisible: 1,
+      numScroll: 1
+    }
+  ]);
 }

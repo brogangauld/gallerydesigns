@@ -9,44 +9,44 @@ export class MediaService {
     {
       id: '1',
       image: '/media/gd0.jpeg',
-      title: 'Sliding Wardrobes',
-      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
-      category: 'SOLID WOOD'
+      title: 'Home Office',
+      description: 'Home office storage that fits your style and maximizes productivity.',
     },
     {
       id: '2',
       image: '/media/gd1.jpeg',
       title: 'Living Room',
-      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
-      category: 'MARBLE'
+      description: 'Entertainment units that blend seamlessly and keep clutter out of sight.',
     },
     {
       id: '3',
       image: '/media/gd2.jpeg',
-      title: 'Awkward Spaces',
-      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
-      category: 'SOLID WOOD'
+      title: 'Bedrooms',
+      description: 'Dreamy bedroom storage solutions designed for ultimate relaxation.',
     },
     {
       id: '4',
-      image: '/media/gd3.jpeg',
-      title: 'Home Office',
-      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
-      category: 'VENEER MDF'
+      image: '/media/gd4.jpeg',
+      title: 'Walk-in Wardrobes',
+      description: 'Create the walk-in wardrobe you\'ve always dreamed of.',
     },
     {
       id: '5',
-      image: '/media/gd4.jpeg',
-      title: 'Walk-in Wardrobes',
-      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
-      category: 'GLASS'
+      image: '/media/gd5.jpeg',
+      title: 'Fitted Wardrobes',
+      description: 'Maximise every inch with fitted wardrobes tailored to your space.',
     },
     {
       id: '6',
-      image: '/media/gd0.jpeg',
-      title: 'Fitted Wardrobes',
-      description: 'Custom-designed wardrobes that maximize your storage space while complementing your rooms aesthetic.',
-      category: 'MARBLE'
+      image: '/media/gd6.jpeg',
+      title: 'Awkward Spaces',
+      description: 'Clever storage solutions for those hard-to-work-with spaces.',
+    },
+    {
+      id: '7',
+      image: '/media/gd7.jpeg',
+      title: 'Sliding Wardrobes',
+      description: 'Space-saving sliding wardrobes that bring style and functionality.',
     }
   ]);
 
@@ -55,18 +55,8 @@ export class MediaService {
     return this.mediaItems();
   }
 
-  // Get media by category
-  getMediaByCategory(category: string) {
-    return this.mediaItems().filter(item => item.category === category);
-  }
-
   // Get single media item by id
   getMediaById(id: string) {
     return this.mediaItems().find(item => item.id === id);
-  }
-
-  // Get all unique categories
-  getCategories() {
-    return [...new Set(this.mediaItems().map(item => item.category))];
   }
 }

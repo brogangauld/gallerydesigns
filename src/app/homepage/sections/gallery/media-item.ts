@@ -3,5 +3,4 @@ export interface MediaItem {
   image: string;
   title: string;
   description: string;
-  category: string;
 }

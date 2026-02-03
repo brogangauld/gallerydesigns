@@ -1,34 +1,18 @@
 <div class="card">
-  <p-carousel
-    [value]="mediaItems()"
-    [numVisible]="4"
-    [numScroll]="4"
-    [circular]="true"
-    [responsiveOptions]="responsiveOptions()"
-    [autoplayInterval]="8000"
-  >
+  <p-carousel [value]="mediaItems()" [numVisible]="4" [numScroll]="4" [circular]="true"
+    [responsiveOptions]="responsiveOptions()" [autoplayInterval]="8000">
     <ng-template let-item pTemplate="item">
       <!-- Carousel item -->
-      <div class="relative h-72 sm:h-80 md:h-96 lg:h-112 rounded overflow-hidden m-2">
+      <div class="relative h-96 lg:h-112 rounded overflow-hidden m-2">
 
         <!-- Background image -->
-        <img
-          [src]="item.image"
-          [alt]="item.title"
-          class="absolute inset-0 w-full h-full object-cover"
-        />
+        <img [src]="item.image" [alt]="item.title" class="absolute inset-0 w-full h-full object-cover" />
 
         <!-- Gradient overlay -->
         <div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent"></div>
 
         <!-- Text overlay -->
         <div class="absolute bottom-0 left-0 right-0 z-10 p-4 text-white">
-          
-          <!-- Tag above title -->
-          <p-tag
-            [value]="item.category"
-            class="mb-2 tag-info"
-          />
 
           <div class="text-xl font-semibold">
             {{ item.title }}
@@ -43,4 +27,3 @@
     </ng-template>
   </p-carousel>
 </div>
-
