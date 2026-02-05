@@ -20,5 +20,4 @@ import { RichText } from '../../common/rich-text/rich-text';
   standalone: true
 })
 export class Homepage {
-
 }

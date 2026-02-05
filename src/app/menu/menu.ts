@@ -56,16 +56,12 @@ export class Menu implements AfterViewInit{
   }
 
   private performScroll(anchorId: string) {
-    const element = document.getElementById(anchorId);
-    if (!element) return;
-    
-    const navHeight = 64;
-    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-    const offsetPosition = elementPosition - navHeight;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
-  }
+  const element = document.getElementById(anchorId);
+  if (!element) return;
+  
+  element.scrollIntoView({ 
+    behavior: 'smooth', 
+    block: 'start' 
+  });
+}
 }

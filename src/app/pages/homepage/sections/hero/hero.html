@@ -1,10 +1,15 @@
 <section
-  class="relative z-10 w-full
-         min-h-dvh
-         bg-cover bg-center
-         flex flex-col"
-  style="background-image: url('/media/gd1.png');"
+  class="relative z-10 w-full min-h-dvh flex flex-col overflow-hidden"
 >
+  <!-- Optimized background image with priority loading -->
+  <img 
+    ngSrc="/media/gd1.png"
+    fill
+    priority
+    sizes="100vw"
+    class="object-cover object-center -z-10"
+  />
+
   <!-- Gradient overlay -->
   <div
     class="absolute inset-0 bg-linear-to-b
@@ -64,10 +69,10 @@
 
     <!-- Desktop stats -->
     <div class="hidden md:flex gap-2 justify-end pr-6 md:pr-20">
-      <app-stats [stat]="{ figure: '12', title: 'Years Experience', description: 'Improving homes with expert craftsmanship for years' }" />
-      <app-stats [stat]="{ figure: '300+', title: 'Projects Completed', description: 'Over 347 successful projects delivered with quality and care' }" />
-      <app-stats [stat]="{ figure: '4', title: 'Skilled Tradespeople', description: 'Our team ensures top-quality results' }" />
-      <app-stats [stat]="{ figure: '100%', title: 'Client Satisfaction', description: 'All of our clients are satisfied with our work and service' }" />
+      <app-stats [stat]="stats[0]" />
+      <app-stats [stat]="stats[1]" />
+      <app-stats [stat]="stats[2]" />
+      <app-stats [stat]="stats[3]" />
     </div>
 
     <!-- Mobile carousel -->

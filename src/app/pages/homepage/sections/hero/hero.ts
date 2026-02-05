@@ -5,24 +5,25 @@ import { TagModule } from 'primeng/tag';
 import { Stats } from "./stats/stats";
 import { DividerModule } from 'primeng/divider';
 import { CarouselModule } from 'primeng/carousel';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-hero',
-  imports: [CommonModule, ButtonModule, TagModule, Stats, DividerModule, CarouselModule],
+  imports: [CommonModule, ButtonModule, TagModule, Stats, DividerModule, CarouselModule, NgOptimizedImage],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })
 export class Hero {
   stats = [
     {
-      figure: '12',
+      figure: '16',
       title: 'Years Experience',
       description: 'Improving homes with expert craftsmanship for years',
     },
     {
-      figure: '300+',
+      figure: '2500+',
       title: 'Projects Completed',
-      description: 'Over 347 successful projects delivered with quality and care',
+      description: 'Over 2500successful projects delivered with quality and care',
     },
     {
       figure: '4',
